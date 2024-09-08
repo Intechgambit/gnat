@@ -1,14 +1,32 @@
-# Genomic Analytics Tool (gnat)
-## Tool describtion: 
-GNAT is a python Fet supported desktop App developed by Intechgambit to process genomic data (DNA and Edna) by pulling data from [NCBI Entrez databased](https://www.ncbi.nlm.nih.gov/search/) utlizing the Entrez API, creating a custom blast supported database, making taxonmic assignments and annonotations and generating analytics and vizulizations. The tool also does data conversion to the FASTA format that is searchable by NCBI BLAST.
-## NCBI Entrez API downloads:
-Downloads from NCBI Entrez databases is used independently or in combination of the user's own datasets to create a searchable BLAST and relational database that can be used for annotations and taxonomic assignments. 
+## Genomic Analytics Tool (gnat)
 
-### How to use the feature
-Borads referred to as "Species Boards" in the tools are utilized to create search parameters used to retrieve data from NCBI databases through their [Entrez API](https://www.ncbi.nlm.nih.gov/books/NBK25501/).
-- Go from Workspace, select Board Manager. This will take you to home of species boards
-- You can either create a new board clicking on Add new board or use an existing board by clicking on it.
-- Enter a species name that you will searching. This will be used to save all the output activivties for that list.You have options to select different colors for your lists or you can leave at a defaulst. After typing the name you can click create or enter.
-- Add a search query for your list. Search queries are parameters used directly to search the NCBI databases. You can add multiple search queries on a single list. Each list contutes a single search and items on the list are searched iteratively. Each search query should include all the parameters you want to apply on that specific search. If you do not know how to generate queries for NCBI database search you can generate them by going to [NCBI website](https://www.ncbi.nlm.nih.gov). Select the Nucleotide database and use a desired search term. Apply all the filters needed and copy the "Search details" contents and paste it search detail of the tool to add as a query.
-- Click on the three dots in the right corner of the list you created. Edit options allows you to edit the name you entered for the list. Delete option will delete the list. Get date will search your queries against the NCBI Entrez database and download the data to your local machine.
-- To check the status of your downloads, you can
+GNAT is a user-friendly Python Flet desktop application developed by Intechgambit to streamline your genomic data analysis workflow. It enables you to:
+
+- Process genomic data: Analyze both DNA and RNA sequences.
+- Retrieve data from NCBI Entrez: Leverage the power of the National Center for Biotechnology Information (NCBI) Entrez databases using the integrated Entrez API.
+- Create custom BLAST databases: Generate searchable databases optimized for BLAST searches.
+- Perform taxonomic assignments and annotations: Efficiently assign taxonomic classifications and enrich your data with annotations.
+- Generate visualizations: Create informative visualizations to gain deeper insights from your genomic data.
+- Convert data to FASTA format: Seamlessly convert your data into the FASTA format for NCBI BLAST compatibility.
+## Leveraging NCBI Entrez Downloads
+
+GNAT integrates seamlessly with NCBI Entrez databases, allowing you to either use their resources independently or combine them with your own datasets. This powerful combination facilitates the creation of robust, searchable BLAST databases and relational databases. These databases are invaluable for tasks such as annotation, taxonomic classification, and analysis.
+
+## User-Friendly Interface: Species Boards
+
+GNAT prioritizes user experience with its intuitive Species Boards feature. These boards serve as convenient containers for defining search parameters used to retrieve data from NCBI databases via their Entrez API. Here's how to utilize them effectively:
+
+1. Board Management: Access the Board Manager from your Workspace. This section serves as your central hub for managing Species Boards.
+2. Create or Select a Board:
+- To create a new board, click "Add new board" and provide a descriptive name. Optionally, choose a color to visually differentiate your lists.
+- To use an existing board, simply click on its name.
+3. Define Species Search: Enter the species name you intend to investigate. This name will serve as a label for all output activities associated with this specific search.
+4. Craft Search Queries:
+- Search queries represent parameters directly translated into NCBI database searches. You can create multiple queries within a single list, with each iteratively searching for items fulfilling those parameters.
+- Unsure how to formulate queries? No problem! Visit the NCBI website (https://www.ncbi.nlm.nih.gov), select the Nucleotide database, define your search terms and filters, and copy the displayed "Search details" text. Paste this into the tool's search query field.
+5. Manage Your Lists:
+- Click the three dots located in the top right corner of a list to access its options. Here, you can edit the list name, delete it, or trigger a data download using the "Get data" function.
+6. Monitoring Downloads: Gain visibility into download progress and track the status of your data retrieval requests.
+Additional Notes: (Will include the installation). 
+
+We are continuously working to enhance GNAT. Your feedback and contributions are highly valued.
