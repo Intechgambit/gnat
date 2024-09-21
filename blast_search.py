@@ -3,6 +3,7 @@ import shutil
 from multiprocessing.dummy import Pool
 import argparse
 from datetime import datetime
+import time
 
 parser = argparse.ArgumentParser(description=
                                  'Intechgambit software')
@@ -12,6 +13,9 @@ parser.add_argument('-db', '--database', type=str,
 parser.add_argument('-l', '--label', type=str,
                     dest='label',
                     help='choose results directory label')
+parser.add_argument('-s', '--sample', type=str,
+                    dest='samples',
+                    help='choose this options if you have samples')
 
 args = parser.parse_args()
 
@@ -41,6 +45,10 @@ class BLAST:
         out_dir = f"{os.path.expanduser('~')}/stDatApp/blast_results"
         label = str(args.label).replace(" ", "_").strip()
         out_dir = os.path.join(out_dir, label)
+        if args.samples:
+            prev_dir = str(input_search).rsplit(f"/{filename}")[0]
+            prev_dir = os.path.basename(prev_dir)
+            out_dir = f"{os.path.expanduser('~')}/stDatApp/blast_results/{label}/{prev_dir}"
         os.makedirs(out_dir, exist_ok=True)
         blast_db = args.database
         out_str = str(filename).rsplit("/", 1)[0].rsplit("/", 1)[-1]
@@ -68,9 +76,12 @@ class BLAST:
 
 
 if __name__ == '__main__':
-    pool = Pool(os.cpu_count())
+    start = time.time()
+    pool = Pool((os.cpu_count()*10))
     process = BLAST()
     process_input = BLAST().get_blast_files()
     pool.map(BLAST().database_search, process_input)
     pool.close()
     BLAST().summary_logs().writelines(f"{datetime.today()} BLAST has completed!! \n")
+    end = time.time()
+    BLAST().summary_logs().writelines(f"{datetime.today()} completion time {(end-start)/60} minutes \n")
