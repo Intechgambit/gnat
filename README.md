@@ -1,6 +1,6 @@
-## Genomic Analytics Tool (gnat)
+## Genomic Intelligence Analytics Tool (GIAT)
 
-GNAT is a user-friendly Python Flet desktop application developed by Intechgambit to streamline your genomic data analysis workflow. It enables you to:
+GIAT is a user-friendly Python Flet desktop application developed by Intechgambit to streamline your genomic data analysis workflow. It enables you to:
 
 - Process genomic data: Analyze both DNA and RNA sequences.
 - Retrieve data from NCBI Entrez: Leverage the power of the National Center for Biotechnology Information (NCBI) Entrez databases using the integrated Entrez API.
@@ -10,11 +10,11 @@ GNAT is a user-friendly Python Flet desktop application developed by Intechgambi
 - Convert data to FASTA format: Seamlessly convert your data into the FASTA format for NCBI BLAST compatibility.
 ## Leveraging NCBI Entrez Downloads
 
-GNAT integrates seamlessly with NCBI Entrez databases, allowing you to either use their resources independently or combine them with your own datasets. This powerful combination facilitates the creation of robust, searchable BLAST databases and relational databases. These databases are invaluable for tasks such as annotation, taxonomic classification, and analysis.
+GIAT integrates seamlessly with NCBI Entrez databases, allowing you to either use their resources independently or combine them with your own datasets. This powerful combination facilitates the creation of robust, searchable BLAST databases and relational databases. These databases are invaluable for tasks such as annotation, taxonomic classification, and analysis.
 
 ## User-Friendly Interface: Species Boards
 
-GNAT prioritizes user experience with its intuitive Species Boards feature. These boards serve as convenient containers for defining search parameters used to retrieve data from NCBI databases via their Entrez API. Here's how to utilize them effectively:
+GIAT prioritizes user experience with its intuitive Species Boards feature. These boards serve as convenient containers for defining search parameters used to retrieve data from NCBI databases via their Entrez API. Here's how to utilize them effectively:
 
 1. Board Management: Access the Board Manager from your Workspace. This section serves as your central hub for managing Species Boards.
 2. Create or Select a Board:
